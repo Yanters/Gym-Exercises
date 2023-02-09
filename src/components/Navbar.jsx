@@ -1,7 +1,48 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Stack } from '@mui/material';
+
+import Logo from '../assets/images/Logo.png';
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <Stack
+      direction='row'
+      justifyContent='space-around'
+      sx={{
+        gap: { xs: '20px', sm: '61px' },
+        mt: { xs: '20px', sm: '32px' },
+        justifyContent: 'none',
+      }}
+      px='20px'
+    >
+      <Link to='/'>
+        <img
+          src={Logo}
+          alt='Logo'
+          style={{ width: '48px', height: '48px', margin: '0 20px' }}
+        />
+      </Link>
+      <Stack direction='row' alignItems='flex-end' fontSize='24px' gap='20px'>
+        <Link
+          to='/'
+          style={{
+            textDecoration: 'none',
+            color: '#3A1212',
+            borderBottom: '2px solid #FF2625',
+          }}
+        >
+          Home
+        </Link>
+        <a
+          href='#excersises'
+          style={{ textDecoration: 'none', color: '#3A1212' }}
+        >
+          Excersises
+        </a>
+      </Stack>
+    </Stack>
+  );
 };
 
 export default Navbar;
