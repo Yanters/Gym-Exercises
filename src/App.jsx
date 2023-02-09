@@ -1,12 +1,13 @@
 import Home from './pages/Home';
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import ExcersiseDetails from './pages/ExcersiseDetails';
 import { Box } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 
 import './index.css';
-import Footer from './components/Footer';
+import './App.css';
 
 const App = () => {
   return (
