@@ -9,7 +9,7 @@ const Exercises = ({ bodyPart, setExercises, exercises }) => {
 
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(
+  const currentExercises = exercises?.slice(
     indexOfFirstExercise,
     indexOfLastExercise
   );
@@ -47,10 +47,8 @@ const Exercises = ({ bodyPart, setExercises, exercises }) => {
       mt='50px'
       p='20px'
     >
-      <Typography variant='h4' mb='46px'>
-        {bodyPart === 'All'
-          ? 'All Exercises'
-          : bodyPart.charAt(0).toUpperCase() + bodyPart.slice(1)}
+      <Typography variant='h4' mb='46px' textTransform='capitalize'>
+        {bodyPart === 'All' ? 'All Exercises' : bodyPart}
       </Typography>
       <Stack
         direction='row'
