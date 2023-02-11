@@ -38,8 +38,8 @@ const Detail = ({ exerciseDetail }) => {
           gap: { lg: '35px', xs: '20px' },
         }}
       >
-        <Typography variant='h4'>
-          {name?.charAt(0).toUpperCase() + name?.slice(1)}
+        <Typography variant='h4' textTransform='capitalize'>
+          {name}
         </Typography>
         <Typography variant='h6'>
           Exercise {name} is an effective exercise that targets the {bodyPart}.
@@ -48,8 +48,8 @@ const Detail = ({ exerciseDetail }) => {
           follow these steps below. This exercise can be easily adjusted to
           accommodate different fitness levels.
         </Typography>
-        {extraDetail.map((item) => (
-          <Stack key={item.name} direction='row' gap='20px' alignItems='center'>
+        {extraDetail.map((item, index) => (
+          <Stack key={index} direction='row' gap='20px' alignItems='center'>
             <Button
               sx={{
                 background: '#fff2db',
