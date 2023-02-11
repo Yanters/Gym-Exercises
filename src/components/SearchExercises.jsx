@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 
-const SearchExcercises = () => {
+const SearchExercises = () => {
   const [search, setSearch] = useState('');
 
   const handleSearch = async () => {
@@ -72,4 +72,4 @@ const SearchExcercises = () => {
   );
 };
 
-export default SearchExcercises;
+export default SearchExercises;
